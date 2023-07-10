@@ -1,6 +1,4 @@
-console.log("Welcome to Spotify");
-
-// Initialize the Variables
+console.log("Welcome to Wynk Music");
 let songIndex = 0;
 let audioElement = new Audio('songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
@@ -28,7 +26,6 @@ songItems.forEach((element, i)=>{
 })
  
 
-// Handle play/pause click
 masterPlay.addEventListener('click', ()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
@@ -43,9 +40,9 @@ masterPlay.addEventListener('click', ()=>{
         gif.style.opacity = 0;
     }
 })
-// Listen to Events
+
 audioElement.addEventListener('timeupdate', ()=>{ 
-    // Update Seekbar
+    
     progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
     myProgressBar.value = progress;
 })
